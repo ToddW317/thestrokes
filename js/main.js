@@ -98,6 +98,8 @@ if (contactForm) {
         
         try {
             const formData = new FormData(contactForm);
+            
+            // Make sure form-name is included in the data
             const response = await fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
